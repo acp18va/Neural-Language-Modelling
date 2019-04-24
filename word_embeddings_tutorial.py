@@ -215,6 +215,7 @@ trigrams = [([test_sentence[i], test_sentence[i + 1]], test_sentence[i + 2])
 print(trigrams[:3])
 
 vocab = set(test_sentence)
+print(vocab)
 word_to_ix = {word: i for i, word in enumerate(vocab)}
 
 
