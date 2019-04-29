@@ -71,9 +71,9 @@ class NGramLanguageModeler(nn.Module):
 losses = []
 loss_function = nn.NLLLoss()
 model = NGramLanguageModeler(len(vocab), EMBEDDING_DIM, CONTEXT_SIZE)
-optimizer = optim.SGD(model.parameters(), lr=0.02)
+optimizer = optim.SGD(model.parameters(), lr=0.01)
 
-for epoch in range(25):
+for epoch in range(20):
     total_loss = torch.Tensor([0])
     for sent in processed_sentence:
         # build a list of tuples.  Each tuple is ([ word_i-2, word_i-1 ], target word)
